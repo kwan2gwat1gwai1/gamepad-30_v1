@@ -34,9 +34,9 @@ namespace gamePad {
     let PIN_INIT = 0;
     
     export enum Vibrator { 
-        //% blockId="V0" block="stop"
+        //% blockId="V0" block="Off"
         V0 = 0,
-        //% blockId="V1" block="Vibration"
+        //% blockId="V1" block="On"
         V1 = 255,     
     }
         
