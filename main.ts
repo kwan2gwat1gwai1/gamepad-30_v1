@@ -39,14 +39,7 @@ namespace gamePad {
         //% blockId="V1" block="Vibration"
         V1 = 255,     
     }
-    
-    export enum Led {
-        //% blockId="OFF" block="off"
-        OFF = 0,
-        //% blockId="ON" block="on"
-        ON = 1
-    }
-    
+        
     //% shim=gamerpad::init
     function init(): void {
         return;
@@ -57,9 +50,6 @@ namespace gamePad {
         pins.setPull(DigitalPin.P14, PinPullMode.PullNone);
         pins.setPull(DigitalPin.P15, PinPullMode.PullNone);        
         pins.setPull(DigitalPin.P16, PinPullMode.PullNone);
-        
-        pins.setPull(DigitalPin.P12, PinPullMode.PullUp);
-
         PIN_INIT = 1;
         return;
     }
@@ -120,20 +110,7 @@ namespace gamePad {
             PinInit();
         }
         let num = degree * 4;
-        pins.analogWritePin(AnalogPin.P0, <number>num);
+        pins.analogWritePin(AnalogPin.P12, <number>num);
         return;
-    }
-    
-    /**
-     * LED indicator light switch.
-     */
-    //% weight=20
-    //% blockId=gamePad_led block="LED|%index|"
-    //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2
-    export function led(index: Led): void {
-        if (!PIN_INIT) { 
-            PinInit();
-        }
-        pins.digitalWritePin(DigitalPin.P12, <number>index);
     }
 }
