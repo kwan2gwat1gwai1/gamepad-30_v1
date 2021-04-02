@@ -11,6 +11,9 @@ enum GamerBitPin {
     P16 = DAL.MICROBIT_ID_IO_P16,
     //% block="D-PAD right"
     P14 = DAL.MICROBIT_ID_IO_P14,
+
+    //% block="D-PAD joystick"
+    P8 = DAL.MICROBIT_ID_IO_P8,
 }
 
 /**
@@ -50,6 +53,8 @@ namespace gamePad {
         pins.setPull(DigitalPin.P14, PinPullMode.PullNone);
         pins.setPull(DigitalPin.P15, PinPullMode.PullNone);        
         pins.setPull(DigitalPin.P16, PinPullMode.PullNone);
+
+        pins.setPull(DigitalPin.P8, PinPullMode.PullNone);
         PIN_INIT = 1;
         return;
     }
