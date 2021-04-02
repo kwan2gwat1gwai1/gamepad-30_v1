@@ -1,0 +1,21 @@
+{
+    "name": "gamepad 3.0_v0",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*"
+    },
+    "files": [        
+        "main.ts",
+        "gamerpad.cpp",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
+}
